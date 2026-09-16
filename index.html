@@ -1,507 +1,528 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Joan Bonifacio - Tier 2 IT Support and Service Desk professional portfolio.">
+```
+<meta name="description"
+      content="Joan Bonifacio - Tier 2 IT Support and Service Desk professional portfolio.">
 
-    <title>Joan Bonifacio | Tier 2 IT Support</title>
+<title>Joan Bonifacio | Tier 2 IT Support</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    html {
+        scroll-behavior: smooth;
+    }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #0f172a;
-            color: #e5e7eb;
-            line-height: 1.7;
-        }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #0f172a;
+        color: #e5e7eb;
+        line-height: 1.7;
+    }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-        }
+    .container {
+        width: 90%;
+        max-width: 1100px;
+        margin: auto;
+    }
 
-        /* =========================
-           NAVIGATION
-        ========================== */
+    /* =========================
+       NAVIGATION
+    ========================== */
 
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(15, 23, 42, 0.95);
-            border-bottom: 1px solid #1e293b;
-            backdrop-filter: blur(10px);
-        }
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(15, 23, 42, 0.95);
+        border-bottom: 1px solid #1e293b;
+        backdrop-filter: blur(10px);
+    }
+
+    .nav-container {
+        min-height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 21px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+    }
+
+    .logo span {
+        color: #38bdf8;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 25px;
+        list-style: none;
+    }
+
+    .nav-links a {
+        color: #cbd5e1;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: #38bdf8;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+        min-height: 650px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        background:
+            radial-gradient(circle at 80% 20%, rgba(56, 189, 248, 0.12), transparent 30%),
+            radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.08), transparent 30%),
+            #0f172a;
+    }
+
+    .hero-content {
+        max-width: 800px;
+    }
+
+    .eyebrow {
+        display: inline-block;
+        color: #38bdf8;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    .hero h1 {
+        font-size: clamp(42px, 7vw, 76px);
+        line-height: 1.05;
+        margin-bottom: 20px;
+        color: #f8fafc;
+    }
+
+    .hero h1 span {
+        color: #38bdf8;
+    }
+
+    .hero h2 {
+        font-size: clamp(20px, 3vw, 30px);
+        font-weight: normal;
+        color: #cbd5e1;
+        margin-bottom: 25px;
+    }
+
+    .hero-description {
+        max-width: 720px;
+        color: #94a3b8;
+        font-size: 17px;
+        margin-bottom: 35px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 12px 22px;
+        border-radius: 7px;
+        font-weight: bold;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    .button-primary {
+        background: #38bdf8;
+        color: #082f49;
+    }
+
+    .button-primary:hover {
+        transform: translateY(-2px);
+        background: #7dd3fc;
+    }
+
+    .button-secondary {
+        border: 1px solid #334155;
+        color: #e2e8f0;
+    }
+
+    .button-secondary:hover {
+        border-color: #38bdf8;
+        color: #38bdf8;
+        transform: translateY(-2px);
+    }
+
+    /* =========================
+       SECTIONS
+    ========================== */
+
+    section {
+        padding: 90px 0;
+        border-bottom: 1px solid #1e293b;
+    }
+
+    .section-heading {
+        margin-bottom: 45px;
+    }
+
+    .section-label {
+        color: #38bdf8;
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+        color: #f8fafc;
+    }
+
+    .section-heading p {
+        color: #94a3b8;
+        max-width: 700px;
+        margin-top: 10px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 50px;
+        align-items: start;
+    }
+
+    .about-text p {
+        color: #cbd5e1;
+        margin-bottom: 18px;
+    }
+
+    .about-card {
+        background: #111c32;
+        border: 1px solid #243247;
+        border-radius: 12px;
+        padding: 28px;
+    }
+
+    .about-card h3 {
+        color: #f8fafc;
+        margin-bottom: 18px;
+    }
+
+    .about-card div {
+        padding: 12px 0;
+        border-bottom: 1px solid #243247;
+    }
+
+    .about-card div:last-child {
+        border-bottom: none;
+    }
+
+    .about-card strong {
+        display: block;
+        color: #38bdf8;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .about-card span {
+        color: #cbd5e1;
+    }
+
+    /* =========================
+       SKILLS
+    ========================== */
+
+    .skill-groups {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .skill-group {
+        background: #111c32;
+        border: 1px solid #243247;
+        border-radius: 12px;
+        padding: 28px;
+    }
+
+    .skill-group h3 {
+        color: #f8fafc;
+        margin-bottom: 20px;
+    }
+
+    .skill-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+    }
+
+    .skill {
+        background: #1e293b;
+        color: #cbd5e1;
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 13px;
+        border: 1px solid #334155;
+    }
+
+    /* =========================
+       PROJECTS
+    ========================== */
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+    }
+
+    .project-card {
+        background: #111c32;
+        border: 1px solid #243247;
+        border-radius: 12px;
+        padding: 28px;
+        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-card:hover {
+        transform: translateY(-5px);
+        border-color: #38bdf8;
+    }
+
+    .project-number {
+        color: #38bdf8;
+        font-size: 13px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+        color: #f8fafc;
+        font-size: 21px;
+        margin-bottom: 12px;
+    }
+
+    .project-card p {
+        color: #94a3b8;
+        font-size: 14px;
+        margin-bottom: 20px;
+        flex-grow: 1;
+    }
+
+    .project-link {
+        color: #38bdf8;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    /* =========================
+       EXPERIENCE
+    ========================== */
+
+    .timeline {
+        border-left: 2px solid #334155;
+        padding-left: 30px;
+        max-width: 850px;
+    }
+
+    .experience-item {
+        position: relative;
+        margin-bottom: 45px;
+    }
+
+    .experience-item::before {
+        content: "";
+        position: absolute;
+        left: -39px;
+        top: 7px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #38bdf8;
+        border: 3px solid #0f172a;
+    }
+
+    .experience-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .experience-date {
+        color: #38bdf8;
+        font-size: 13px;
+        font-weight: bold;
+        margin-bottom: 6px;
+    }
+
+    .experience-item h3 {
+        color: #f8fafc;
+        font-size: 22px;
+    }
+
+    .experience-company {
+        color: #cbd5e1;
+        margin-bottom: 12px;
+    }
+
+    .experience-item p {
+        color: #94a3b8;
+    }
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact-box {
+        background: #111c32;
+        border: 1px solid #243247;
+        border-radius: 14px;
+        padding: 45px;
+        text-align: center;
+    }
+
+    .contact-box h2 {
+        color: #f8fafc;
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .contact-box p {
+        color: #94a3b8;
+        max-width: 600px;
+        margin: 0 auto 28px;
+    }
+
+    .contact-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .contact-links a {
+        display: inline-block;
+        padding: 11px 20px;
+        border: 1px solid #334155;
+        border-radius: 7px;
+        color: #e2e8f0;
+        font-weight: bold;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    .contact-links a:hover {
+        border-color: #38bdf8;
+        color: #38bdf8;
+        transform: translateY(-2px);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+        padding: 30px 0;
+        text-align: center;
+        color: #64748b;
+        font-size: 13px;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 850px) {
 
         .nav-container {
-            min-height: 70px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 21px;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-        }
-
-        .logo span {
-            color: #38bdf8;
+            flex-direction: column;
+            padding: 15px 0;
+            gap: 12px;
         }
 
         .nav-links {
-            display: flex;
-            gap: 25px;
-            list-style: none;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
-
-        .nav-links a {
-            color: #cbd5e1;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #38bdf8;
-        }
-
-        /* =========================
-           HERO
-        ========================== */
 
         .hero {
-            min-height: 650px;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            background:
-                radial-gradient(circle at 80% 20%, rgba(56, 189, 248, 0.12), transparent 30%),
-                radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.08), transparent 30%),
-                #0f172a;
+            min-height: 600px;
         }
 
-        .hero-content {
-            max-width: 800px;
+        .about-grid,
+        .skill-groups {
+            grid-template-columns: 1fr;
         }
 
-        .eyebrow {
-            display: inline-block;
-            color: #38bdf8;
-            font-size: 14px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 15px;
+        .projects-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 600px) {
+
+        .container {
+            width: 92%;
+        }
+
+        section {
+            padding: 65px 0;
         }
 
         .hero h1 {
-            font-size: clamp(42px, 7vw, 76px);
-            line-height: 1.05;
-            margin-bottom: 20px;
-            color: #f8fafc;
-        }
-
-        .hero h1 span {
-            color: #38bdf8;
+            font-size: 45px;
         }
 
         .hero h2 {
-            font-size: clamp(20px, 3vw, 30px);
-            font-weight: normal;
-            color: #cbd5e1;
-            margin-bottom: 25px;
+            font-size: 21px;
         }
 
         .hero-description {
-            max-width: 720px;
-            color: #94a3b8;
-            font-size: 17px;
-            margin-bottom: 35px;
-        }
-
-        .buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 12px 22px;
-            border-radius: 7px;
-            font-weight: bold;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        .button-primary {
-            background: #38bdf8;
-            color: #082f49;
-        }
-
-        .button-primary:hover {
-            transform: translateY(-2px);
-            background: #7dd3fc;
-        }
-
-        .button-secondary {
-            border: 1px solid #334155;
-            color: #e2e8f0;
-        }
-
-        .button-secondary:hover {
-            border-color: #38bdf8;
-            color: #38bdf8;
-            transform: translateY(-2px);
-        }
-
-        /* =========================
-           SECTIONS
-        ========================== */
-
-        section {
-            padding: 90px 0;
-            border-bottom: 1px solid #1e293b;
-        }
-
-        .section-heading {
-            margin-bottom: 45px;
-        }
-
-        .section-label {
-            color: #38bdf8;
-            font-size: 13px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 8px;
+            font-size: 15px;
         }
 
         .section-heading h2 {
-            font-size: 34px;
-            color: #f8fafc;
+            font-size: 29px;
         }
-
-        .section-heading p {
-            color: #94a3b8;
-            max-width: 700px;
-            margin-top: 10px;
-        }
-
-        /* =========================
-           ABOUT
-        ========================== */
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1.4fr 1fr;
-            gap: 50px;
-            align-items: start;
-        }
-
-        .about-text p {
-            color: #cbd5e1;
-            margin-bottom: 18px;
-        }
-
-        .about-card {
-            background: #111c32;
-            border: 1px solid #243247;
-            border-radius: 12px;
-            padding: 28px;
-        }
-
-        .about-card h3 {
-            color: #f8fafc;
-            margin-bottom: 18px;
-        }
-
-        .about-card div {
-            padding: 12px 0;
-            border-bottom: 1px solid #243247;
-        }
-
-        .about-card div:last-child {
-            border-bottom: none;
-        }
-
-        .about-card strong {
-            display: block;
-            color: #38bdf8;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .about-card span {
-            color: #cbd5e1;
-        }
-
-        /* =========================
-           SKILLS
-        ========================== */
-
-        .skill-groups {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .skill-group {
-            background: #111c32;
-            border: 1px solid #243247;
-            border-radius: 12px;
-            padding: 28px;
-        }
-
-        .skill-group h3 {
-            color: #f8fafc;
-            margin-bottom: 20px;
-        }
-
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 9px;
-        }
-
-        .skill {
-            background: #1e293b;
-            color: #cbd5e1;
-            padding: 8px 12px;
-            border-radius: 6px;
-            font-size: 13px;
-            border: 1px solid #334155;
-        }
-
-        /* =========================
-           PROJECTS
-        ========================== */
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
-        }
-
-        .project-card {
-            background: #111c32;
-            border: 1px solid #243247;
-            border-radius: 12px;
-            padding: 28px;
-            transition: 0.3s;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: #38bdf8;
-        }
-
-        .project-number {
-            color: #38bdf8;
-            font-size: 13px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .project-card h3 {
-            color: #f8fafc;
-            font-size: 21px;
-            margin-bottom: 12px;
-        }
-
-        .project-card p {
-            color: #94a3b8;
-            font-size: 14px;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-
-        .project-link {
-            color: #38bdf8;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        /* =========================
-           EXPERIENCE
-        ========================== */
-
-        .timeline {
-            border-left: 2px solid #334155;
-            padding-left: 30px;
-            max-width: 850px;
-        }
-
-        .experience-item {
-            position: relative;
-            margin-bottom: 45px;
-        }
-
-        .experience-item::before {
-            content: "";
-            position: absolute;
-            left: -39px;
-            top: 7px;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background: #38bdf8;
-            border: 3px solid #0f172a;
-        }
-
-        .experience-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .experience-date {
-            color: #38bdf8;
-            font-size: 13px;
-            font-weight: bold;
-            margin-bottom: 6px;
-        }
-
-        .experience-item h3 {
-            color: #f8fafc;
-            font-size: 22px;
-        }
-
-        .experience-company {
-            color: #cbd5e1;
-            margin-bottom: 12px;
-        }
-
-        .experience-item p {
-            color: #94a3b8;
-        }
-
-        /* =========================
-           CONTACT
-        ========================== */
 
         .contact-box {
-            background: #111c32;
-            border: 1px solid #243247;
-            border-radius: 14px;
-            padding: 45px;
-            text-align: center;
+            padding: 30px 20px;
         }
+    }
+</style>
+```
 
-        .contact-box h2 {
-            color: #f8fafc;
-            font-size: 32px;
-            margin-bottom: 12px;
-        }
-
-        .contact-box p {
-            color: #94a3b8;
-            max-width: 600px;
-            margin: 0 auto 28px;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 14px;
-        }
-
-        /* =========================
-           FOOTER
-        ========================== */
-
-        footer {
-            padding: 30px 0;
-            text-align: center;
-            color: #64748b;
-            font-size: 13px;
-        }
-
-        /* =========================
-           RESPONSIVE
-        ========================== */
-
-        @media (max-width: 850px) {
-
-            .nav-container {
-                flex-direction: column;
-                padding: 15px 0;
-                gap: 12px;
-            }
-
-            .nav-links {
-                gap: 14px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .hero {
-                min-height: 600px;
-            }
-
-            .about-grid,
-            .skill-groups {
-                grid-template-columns: 1fr;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 600px) {
-
-            .container {
-                width: 92%;
-            }
-
-            section {
-                padding: 65px 0;
-            }
-
-            .hero h1 {
-                font-size: 45px;
-            }
-
-            .hero h2 {
-                font-size: 21px;
-            }
-
-            .hero-description {
-                font-size: 15px;
-            }
-
-            .section-heading h2 {
-                font-size: 29px;
-            }
-
-            .contact-box {
-                padding: 30px 20px;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -513,21 +534,23 @@
 <nav>
     <div class="container nav-container">
 
-        <a href="#home" class="logo">
-            JB<span>.</span>
-        </a>
+```
+    <a href="#home" class="logo">
+        JB<span>.</span>
+    </a>
 
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 
-    </div>
+</div>
+```
+
 </nav>
-
 
 <!-- =========================
      HERO
@@ -535,56 +558,59 @@
 
 <header class="hero" id="home">
 
-    <div class="container">
+```
+<div class="container">
 
-        <div class="hero-content">
+    <div class="hero-content">
 
-            <div class="eyebrow">
-                IT Support Professional
-            </div>
+        <div class="eyebrow">
+            IT Support Professional
+        </div>
 
-            <h1>
-                Joan <span>Bonifacio</span>
-            </h1>
+        <h1>
+            Joan <span>Bonifacio</span>
+        </h1>
 
-            <h2>
-                Tier 2 IT Support | Service Desk | Technical Support
-            </h2>
+        <h2>
+            Tier 2 IT Support | Service Desk | Technical Support
+        </h2>
 
-            <p class="hero-description">
-                IT Support professional with more than 3 years of
-                IT Service Desk experience supporting enterprise users
-                in ticket-driven environments. Experienced in
-                troubleshooting hardware, software, network,
-                application, and account-access issues.
-            </p>
+        <p class="hero-description">
+            IT Support professional with more than 3 years of
+            IT Service Desk experience supporting enterprise users
+            in ticket-driven environments. Experienced in
+            troubleshooting hardware, software, network,
+            application, and account-access issues.
+        </p>
 
-            <div class="buttons">
+        <div class="buttons">
 
-                <a href="#projects" class="button button-primary">
-                    View My Projects
-                </a>
+            <a href="#projects" class="button button-primary">
+                View My Projects
+            </a>
 
-                <a href="https://github.com/joanbonifacio2716-ui"
-                   target="_blank"
-                   class="button button-secondary">
-                    GitHub
-                </a>
+            <a href="https://github.com/joanbonifacio2716-ui"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="button button-secondary">
+                GitHub
+            </a>
 
-                <a href="https://linkedin.com/in/joanbonifacio"
-                   target="_blank"
-                   class="button button-secondary">
-                    LinkedIn
-                </a>
-
-            </div>
+            <a href="https://linkedin.com/in/joanbonifacio"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="button button-secondary">
+                LinkedIn
+            </a>
 
         </div>
 
     </div>
 
-</header>
+</div>
+```
 
+</header>
 
 <!-- =========================
      ABOUT
@@ -592,69 +618,70 @@
 
 <section id="about">
 
-    <div class="container">
+```
+<div class="container">
 
-        <div class="section-heading">
-            <div class="section-label">01 / About</div>
-            <h2>IT Support with an Enterprise Mindset</h2>
+    <div class="section-heading">
+        <div class="section-label">01 / About</div>
+        <h2>IT Support with an Enterprise Mindset</h2>
+    </div>
+
+    <div class="about-grid">
+
+        <div class="about-text">
+
+            <p>
+                I am an IT Support professional with experience
+                providing technical assistance in enterprise
+                Service Desk environments.
+            </p>
+
+            <p>
+                My experience includes troubleshooting Windows,
+                Microsoft 365, hardware, software, network and VPN
+                connectivity, applications, and user access issues.
+            </p>
+
+            <p>
+                I have supported enterprise client environments
+                through phone, remote support tools, and ITSM
+                platforms while working within SLA-driven processes.
+            </p>
+
         </div>
 
-        <div class="about-grid">
+        <div class="about-card">
 
-            <div class="about-text">
+            <h3>Professional Focus</h3>
 
-                <p>
-                    I am an IT Support professional with experience
-                    providing technical assistance in enterprise
-                    Service Desk environments.
-                </p>
-
-                <p>
-                    My experience includes troubleshooting Windows,
-                    Microsoft 365, hardware, software, network and VPN
-                    connectivity, applications, and user access issues.
-                </p>
-
-                <p>
-                    I have supported enterprise client environments
-                    through phone, remote support tools, and ITSM
-                    platforms while working within SLA-driven processes.
-                </p>
-
+            <div>
+                <strong>Support Level</strong>
+                <span>Tier 2 / Service Desk</span>
             </div>
 
-            <div class="about-card">
+            <div>
+                <strong>Environment</strong>
+                <span>Enterprise IT Support</span>
+            </div>
 
-                <h3>Professional Focus</h3>
+            <div>
+                <strong>ITSM</strong>
+                <span>ServiceNow / Ivanti</span>
+            </div>
 
-                <div>
-                    <strong>Support Level</strong>
-                    <span>Tier 2 / Service Desk</span>
-                </div>
-
-                <div>
-                    <strong>Environment</strong>
-                    <span>Enterprise IT Support</span>
-                </div>
-
-                <div>
-                    <strong>ITSM</strong>
-                    <span>ServiceNow / Ivanti</span>
-                </div>
-
-                <div>
-                    <strong>Support</strong>
-                    <span>Remote & Ticket-Based</span>
-                </div>
-
+            <div>
+                <strong>Support</strong>
+                <span>Remote & Ticket-Based</span>
             </div>
 
         </div>
 
     </div>
 
-</section>
+</div>
+```
 
+</section>
 
 <!-- =========================
      SKILLS
@@ -662,85 +689,86 @@
 
 <section id="skills">
 
-    <div class="container">
+```
+<div class="container">
 
-        <div class="section-heading">
-            <div class="section-label">02 / Skills</div>
-            <h2>Technical Skills</h2>
-            <p>
-                Technologies and support areas used in enterprise
-                IT Service Desk environments.
-            </p>
+    <div class="section-heading">
+        <div class="section-label">02 / Skills</div>
+        <h2>Technical Skills</h2>
+        <p>
+            Technologies and support areas used in enterprise
+            IT Service Desk environments.
+        </p>
+    </div>
+
+    <div class="skill-groups">
+
+        <div class="skill-group">
+
+            <h3>IT Support</h3>
+
+            <div class="skill-list">
+                <span class="skill">IT Service Desk</span>
+                <span class="skill">Tier 2 Support</span>
+                <span class="skill">Incident Management</span>
+                <span class="skill">SLA Management</span>
+                <span class="skill">Remote Support</span>
+                <span class="skill">Hardware Troubleshooting</span>
+                <span class="skill">Software Troubleshooting</span>
+            </div>
+
         </div>
 
-        <div class="skill-groups">
+        <div class="skill-group">
 
-            <div class="skill-group">
+            <h3>Microsoft & Identity</h3>
 
-                <h3>IT Support</h3>
-
-                <div class="skill-list">
-                    <span class="skill">IT Service Desk</span>
-                    <span class="skill">Tier 2 Support</span>
-                    <span class="skill">Incident Management</span>
-                    <span class="skill">SLA Management</span>
-                    <span class="skill">Remote Support</span>
-                    <span class="skill">Hardware Troubleshooting</span>
-                    <span class="skill">Software Troubleshooting</span>
-                </div>
-
+            <div class="skill-list">
+                <span class="skill">Microsoft 365</span>
+                <span class="skill">Windows</span>
+                <span class="skill">Active Directory</span>
+                <span class="skill">Microsoft Intune</span>
+                <span class="skill">MFA</span>
+                <span class="skill">Account & Access Support</span>
+                <span class="skill">Okta</span>
             </div>
 
-            <div class="skill-group">
+        </div>
 
-                <h3>Microsoft & Identity</h3>
+        <div class="skill-group">
 
-                <div class="skill-list">
-                    <span class="skill">Microsoft 365</span>
-                    <span class="skill">Windows</span>
-                    <span class="skill">Active Directory</span>
-                    <span class="skill">Microsoft Intune</span>
-                    <span class="skill">MFA</span>
-                    <span class="skill">Account & Access Support</span>
-                    <span class="skill">Okta</span>
-                </div>
+            <h3>Networking</h3>
 
+            <div class="skill-list">
+                <span class="skill">VPN Troubleshooting</span>
+                <span class="skill">Basic Networking</span>
+                <span class="skill">DNS Troubleshooting</span>
+                <span class="skill">TCP/IP Fundamentals</span>
+                <span class="skill">Connectivity Testing</span>
             </div>
 
-            <div class="skill-group">
+        </div>
 
-                <h3>Networking</h3>
+        <div class="skill-group">
 
-                <div class="skill-list">
-                    <span class="skill">VPN Troubleshooting</span>
-                    <span class="skill">Basic Networking</span>
-                    <span class="skill">DNS Troubleshooting</span>
-                    <span class="skill">TCP/IP Fundamentals</span>
-                    <span class="skill">Connectivity Testing</span>
-                </div>
+            <h3>ITSM & Tools</h3>
 
-            </div>
-
-            <div class="skill-group">
-
-                <h3>ITSM & Tools</h3>
-
-                <div class="skill-list">
-                    <span class="skill">ServiceNow</span>
-                    <span class="skill">Ivanti Service Manager</span>
-                    <span class="skill">SAP Support</span>
-                    <span class="skill">Remote Diagnostic Tools</span>
-                    <span class="skill">PowerShell Practice</span>
-                </div>
-
+            <div class="skill-list">
+                <span class="skill">ServiceNow</span>
+                <span class="skill">Ivanti Service Manager</span>
+                <span class="skill">SAP Support</span>
+                <span class="skill">Remote Diagnostic Tools</span>
+                <span class="skill">PowerShell Practice</span>
             </div>
 
         </div>
 
     </div>
 
-</section>
+</div>
+```
 
+</section>
 
 <!-- =========================
      PROJECTS
@@ -748,89 +776,93 @@
 
 <section id="projects">
 
-    <div class="container">
+```
+<div class="container">
 
-        <div class="section-heading">
-            <div class="section-label">03 / Projects</div>
-            <h2>IT Support Projects</h2>
+    <div class="section-heading">
+        <div class="section-label">03 / Projects</div>
+        <h2>IT Support Projects</h2>
+        <p>
+            Practical projects and scripts created to demonstrate
+            technical troubleshooting and IT support skills.
+        </p>
+    </div>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+
+            <div class="project-number">PROJECT 01</div>
+
+            <h3>Windows Troubleshooting</h3>
+
             <p>
-                Practical projects and scripts created to demonstrate
-                technical troubleshooting and IT support skills.
+                A collection of PowerShell practice scripts for
+                gathering system information, checking IP
+                configuration, testing connectivity, and performing
+                basic Windows troubleshooting tasks.
             </p>
+
+            <a href="https://github.com/joanbonifacio2716-ui/it-support-scripts/tree/main/Windows-Troubleshooting"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="project-link">
+                View Project →
+            </a>
+
         </div>
 
-        <div class="projects-grid">
 
-            <div class="project-card">
+        <div class="project-card">
 
-                <div class="project-number">PROJECT 01</div>
+            <div class="project-number">PROJECT 02</div>
 
-                <h3>Windows Troubleshooting</h3>
+            <h3>Active Directory Practice</h3>
 
-                <p>
-                    A collection of PowerShell practice scripts for
-                    gathering system information, checking IP
-                    configuration, testing connectivity, and performing
-                    basic Windows troubleshooting tasks.
-                </p>
+            <p>
+                Practice scripts focused on common Service Desk
+                identity and account-management tasks including
+                user information, account unlocking, and password
+                reset workflows.
+            </p>
 
-                <a href="https://github.com/joanbonifacio2716-ui/it-support-scripts/tree/main/Windows-Troubleshooting"
-                   target="_blank"
-                   class="project-link">
-                    View Project →
-                </a>
+            <a href="https://github.com/joanbonifacio2716-ui/it-support-scripts"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="project-link">
+                View Repository →
+            </a>
 
-            </div>
-
-
-            <div class="project-card">
-
-                <div class="project-number">PROJECT 02</div>
-
-                <h3>Active Directory Practice</h3>
-
-                <p>
-                    Practice scripts focused on common Service Desk
-                    identity and account-management tasks including
-                    user information, account unlocking, and password
-                    reset workflows.
-                </p>
-
-                <a href="https://github.com/joanbonifacio2716-ui/it-support-scripts"
-                   target="_blank"
-                   class="project-link">
-                    View Repository →
-                </a>
-
-            </div>
+        </div>
 
 
-            <div class="project-card">
+        <div class="project-card">
 
-                <div class="project-number">PROJECT 03</div>
+            <div class="project-number">PROJECT 03</div>
 
-                <h3>Network Troubleshooting</h3>
+            <h3>Network Troubleshooting</h3>
 
-                <p>
-                    IT support practice scripts covering DNS,
-                    TCP connectivity, VPN connectivity, and basic
-                    network troubleshooting workflows.
-                </p>
+            <p>
+                IT support practice scripts covering DNS,
+                TCP connectivity, VPN connectivity, and basic
+                network troubleshooting workflows.
+            </p>
 
-                <a href="https://github.com/joanbonifacio2716-ui/it-support-scripts"
-                   target="_blank"
-                   class="project-link">
-                    View Repository →
-                </a>
-
-            </div>
+            <a href="https://github.com/joanbonifacio2716-ui/it-support-scripts"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="project-link">
+                View Repository →
+            </a>
 
         </div>
 
     </div>
 
-</section>
+</div>
+```
 
+</section>
 
 <!-- =========================
      EXPERIENCE
@@ -838,70 +870,71 @@
 
 <section id="experience">
 
-    <div class="container">
+```
+<div class="container">
 
-        <div class="section-heading">
-            <div class="section-label">04 / Experience</div>
-            <h2>Professional Experience</h2>
+    <div class="section-heading">
+        <div class="section-label">04 / Experience</div>
+        <h2>Professional Experience</h2>
+        <p>
+            Enterprise IT Service Desk and technical support experience.
+        </p>
+    </div>
+
+    <div class="timeline">
+
+        <div class="experience-item">
+
+            <div class="experience-date">
+                2026 – Present
+            </div>
+
+            <h3>IT Helpdesk II</h3>
+
+            <div class="experience-company">
+                Stefanini Philippines — MNK Client Account
+            </div>
+
             <p>
-                Enterprise IT Service Desk and technical support experience.
+                Provide Tier 2 remote technical support for
+                enterprise users, troubleshooting hardware,
+                software, Microsoft 365, Windows, networking,
+                VPN, application, and access-related issues.
+                Manage incidents and service requests through
+                ITSM processes.
             </p>
+
         </div>
 
-        <div class="timeline">
 
-            <div class="experience-item">
+        <div class="experience-item">
 
-                <div class="experience-date">
-                    2026 – Present
-                </div>
-
-                <h3>IT Helpdesk II</h3>
-
-                <div class="experience-company">
-                    Stefanini Philippines — MNK Client Account
-                </div>
-
-                <p>
-                    Provide Tier 2 remote technical support for
-                    enterprise users, troubleshooting hardware,
-                    software, Microsoft 365, Windows, networking,
-                    VPN, application, and access-related issues.
-                    Manage incidents and service requests through
-                    ITSM processes.
-                </p>
-
+            <div class="experience-date">
+                2023 – 2026
             </div>
 
+            <h3>IT Service Desk / SME</h3>
 
-            <div class="experience-item">
-
-                <div class="experience-date">
-                    2023 – 2026
-                </div>
-
-                <h3>IT Service Desk / SME</h3>
-
-                <div class="experience-company">
-                    Stefanini Philippines — Labcorp Client Account
-                </div>
-
-                <p>
-                    Supported enterprise users in a ticket-driven
-                    healthcare IT environment. Handled escalations,
-                    incident coordination, account and access support,
-                    and ServiceNow ticket management while working
-                    within SLA requirements.
-                </p>
-
+            <div class="experience-company">
+                Stefanini Philippines — Labcorp Client Account
             </div>
+
+            <p>
+                Supported enterprise users in a ticket-driven
+                healthcare IT environment. Handled escalations,
+                incident coordination, account and access support,
+                and ServiceNow ticket management while working
+                within SLA requirements.
+            </p>
 
         </div>
 
     </div>
 
-</section>
+</div>
+```
 
+</section>
 
 <!-- =========================
      CONTACT
@@ -909,37 +942,51 @@
 
 <section id="contact">
 
-    <div class="container">
+```
+<div class="container">
 
-        <div class="contact-box">
+    <div class="contact-box">
 
-            <div class="section-label">
-                05 / Contact
-            </div>
+        <div class="section-label">
+            05 / Contact
+        </div>
 
-            <h2>Let's Connect</h2>
+        <h2>Let's Connect</h2>
 
-<p>
-I'm open to opportunities in <strong>IT Service Desk, Tier 2 IT Support, Help Desk, and Technical Support</strong>.
-Feel free to connect with me to learn more about my experience and technical projects.
-</p>
+        <p>
+            I'm open to opportunities in
+            <strong>IT Service Desk, Tier 2 IT Support, Help Desk,
+            and Technical Support</strong>.
+            Feel free to connect with me to learn more about my
+            experience and technical projects.
+        </p>
 
-<div class="contact-links">
-    <a href="mailto:bonifaciojoanb@gmail.com">Email Me</a>
-    <a href="https://linkedin.com/in/joanbonifacio" target="_blank">LinkedIn</a>
-    <a href="https://github.com/joanbonifacio2716-ui" target="_blank">GitHub</a>
-</div>
+        <div class="contact-links">
 
+            <a href="mailto:bonifaciojoanb@gmail.com">
+                Email Me
+            </a>
 
+            <a href="https://linkedin.com/in/joanbonifacio"
+               target="_blank"
+               rel="noopener noreferrer">
+                LinkedIn
+            </a>
 
-            </div>
+            <a href="https://github.com/joanbonifacio2716-ui"
+               target="_blank"
+               rel="noopener noreferrer">
+                GitHub
+            </a>
 
         </div>
 
     </div>
 
-</section>
+</div>
+```
 
+</section>
 
 <!-- =========================
      FOOTER
@@ -947,9 +994,11 @@ Feel free to connect with me to learn more about my experience and technical pro
 
 <footer>
 
-    <div class="container">
-        © 2026 Joan Bonifacio · IT Support Portfolio
-    </div>
+```
+<div class="container">
+    © 2026 Joan Bonifacio · IT Support Portfolio
+</div>
+```
 
 </footer>
 
